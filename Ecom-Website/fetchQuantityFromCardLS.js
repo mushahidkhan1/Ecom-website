@@ -1,5 +1,6 @@
 import { getCartProductFromLS } from "./getCartProductFromLS";
 
+
  const fetchQuantityFromCardLS = (id,price) => {
     let cartProducts = getCartProductFromLS();
 
@@ -12,5 +13,7 @@ import { getCartProductFromLS } from "./getCartProductFromLS";
     }
     return {quantity,price}
 }
+export{
+    fetchQuantityFromCardLS
+}
 // fetchQuantityFromCardLS();
-export{fetchQuantityFromCardLS  }

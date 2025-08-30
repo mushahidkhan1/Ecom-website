@@ -31,16 +31,17 @@
 
       <div class="container">
         <div class="navbar-brand">
-          <a href="index.html"> 
+          <a href="index.html">
             <img src="./public/images/logo-m-mart2.png" alt="" height="50px" width="1000px"> </a>
+          </a>
         </div>
         <div class="navbar">
           <ul>
             <li class="nav-item">
-              <a href="" class="nav-link">Home</a>
+              <a href="index.html" class="nav-link">Home</a>
             </li>
             <li class="nav-item">
-              <a href="about.html" class="nav-link">About</a>
+              <a href="" class="nav-link">About</a>
             </li>
             <li class="nav-item">
               <a href="product.html" class="nav-link">Product</a>
@@ -66,7 +67,7 @@
 
     <!-- home hero section start  -->
 
-    <main>
+    <main id="productTemplate">
       <section class="section-hero">
         <div class="container grid grid-two--cols">
           <div class="section-hero--content">
@@ -187,62 +188,7 @@
 
     <!-- policy-section-end  -->
 
-    <!-- product-section-start  -->
-    <section class="section-products container">
-      <div class="">
-        <h2 class="section-common--heading">Checkout M mart</h2>
-      </div>
-    </section>
-    <section class="conatiner">
-      <div id="productContainer"></div>
-    </section>
-    <!-- product-section-end  -->
-
-    <!-- product-template-section-start  -->
-    <template id="productTemplate">
-      <div class="cards" id="cardValue">
-        <article class="information [card]">
-          <span class="category"></span>
-          <div class="imageContainer">
-            <img class="productImage" src="" alt="" />
-          </div>
-          <h2 class="productName"></h2>
-
-          <div class="productRating">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-          </div>
-          <p class="productDescription"></p>
-
-          <div class="productPriceElement">
-            <p class="productPrice"></p>
-            <p class="productActualPrice"></p>
-          </div>
-
-          <div class="productStockElement">
-            <p class="productProperty">Total Stocks Available:</p>
-            <p class="productStock"></p>
-          </div>
-
-          <div class="productQuantityElement">
-            <p class="productProperty">Quantity(Pieces)</p>
-            <div class="stockElement">
-              <button class="cartIncrement">+</button>
-              <p class="productQuantity">1</p>
-              <button class="cartDecrement">-</button>
-            </div>
-          </div>
-          <button class="add-to-cart-button">
-            <i class="fa-solid fa-cart-shopping"></i>Add to Cart
-          </button>
-        </article>
-      </div>
-    </template>
-    <!-- product-template-section-end  -->
-
+    
     <!-- why-choose-us-section-start -->
 
     <section class="section-why--choose">
@@ -354,7 +300,7 @@
     <!-- footer-section-start -->
 
     <footer class="setion-footer">
-         <script src="./footer.js" type="module"></script>
+      <script src="./footer.js"></script>
       <!-- <div class="footer-container container">
         <div class="content_1">
           LOGO
@@ -397,6 +343,6 @@
 
     <!-- footer-section-end -->
 
-    <script src="./src/main.js" type="module"></script>
+    <!-- <script src="./src/main.js" type="module"></script> -->
   </body>
 </html>
