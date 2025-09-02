@@ -1,10 +1,9 @@
-import products from "./api/products.json";
+import products from "../../api/products.json";
 import { getCartProductFromLS } from "./getCartProductFromLS";
 import { fetchQuantityFromCardLS } from "./fetchQuantityFromCardLS";
-import { removeProdFromCart} from "./removeProdFromCart"
+import { removeProdFromCart } from "./removeProdFromCart";
 import { incrementDecrement } from "./incrementDecrement";
 import { updateCartProductTotal } from "./updateCartProductTotal";
-    
 
 let cartProducts = getCartProductFromLS();
 
@@ -13,10 +12,8 @@ let filterProducts = products.filter((curProd) => {
   return cartProducts.some((curElem) => curElem.id === curProd.id);
 });
 
-
 const cartElement = document.querySelector("#productCartContainer");
 const templateContainer = document.querySelector("#productCartTemplate");
-
 
 const showCartProduct = () => {
   filterProducts.forEach((curProd) => {
@@ -38,18 +35,15 @@ const showCartProduct = () => {
     productClone
       .querySelector(".stockElement")
       .addEventListener("click", (event) => {
-        incrementDecrement(event, id, stock,price);
-
+        incrementDecrement(event, id, stock, price);
       });
 
     productClone
       .querySelector(".remove-to-cart-button")
-      .addEventListener("click", () => removeProdFromCart   (id));
+      .addEventListener("click", () => removeProdFromCart(id));
 
-    cartElement.append(productClone);
+    cartElement.appendChild(productClone);
   });
 };
 updateCartProductTotal();
 showCartProduct();
-
-

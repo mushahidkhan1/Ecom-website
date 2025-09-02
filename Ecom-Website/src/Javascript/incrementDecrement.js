@@ -42,7 +42,7 @@ export const incrementDecrement = (event, id, stock, price) => {
     updatedCart = localCartProducts.map((curProd) => {
       return curProd.id === id ? updatedCart : curProd;
     });
-    // console.log(updatedCart);
+   
 
     localStorage.setItem(
       "cartProductLS",

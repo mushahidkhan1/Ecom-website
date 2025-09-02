@@ -1,7 +1,6 @@
 import { getCartProductFromLS } from "./getCartProductFromLS";
 
 export const updateCartProductTotal = () => {
-
   let productSubTotal = document.querySelector(".productSubTotal");
   let productFinalTotal = document.querySelector(".productFinalTotal");
 
@@ -11,8 +10,7 @@ export const updateCartProductTotal = () => {
     let productPrice = parseInt(curElem.price) || 0;
     return accum + productPrice;
   }, initialValue);
-//   console.log(totalProductPrice);
 
   productSubTotal.textContent = `₹${totalProductPrice}`;
-  productFinalTotal.textContent = `₹${totalProductPrice+50}`;
+  productFinalTotal.textContent = `₹${totalProductPrice + 50}`;
 };

@@ -26,14 +26,10 @@ export const addToCart = (event, id, stock) => {
     updatedCart = arrLocalStorageProduct.map((curProd) => {
       return curProd.id === id ? updatedCart : curProd;
     });
-  
 
-    localStorage.setItem(
-      "cartProductLS",
-      JSON.stringify(updatedCart)
-    );
+    localStorage.setItem("cartProductLS", JSON.stringify(updatedCart));
 
-    showToast("add",id);
+    showToast("add", id);
   }
 
   if (existingProd) {
@@ -44,12 +40,12 @@ export const addToCart = (event, id, stock) => {
 
   // console.log(quantity, price);
 
-  let updateCart = { id, quantity, price };
+  // let updateCart = { id, quantity, price };
   arrLocalStorageProduct.push({ id, quantity, price });
   //   localStorage.setItem(".cartProductLS");
   localStorage.setItem("cartProductLS", JSON.stringify(arrLocalStorageProduct));
 
   updateCartValue(arrLocalStorageProduct);
 
-  showToast("add",id);
+  showToast("add", id);
 };

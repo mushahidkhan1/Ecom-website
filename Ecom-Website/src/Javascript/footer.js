@@ -1,9 +1,10 @@
-const footerHTML = `<footer class="section-footer">
+const footerHTML = `
+  <footer class="section-footer">
     <div class="footer-container container">
       <div class="content_1">
-        <img src="./public/images/logo-for-footer.png" alt="" height="40px" width="800px"> </a>
+        <img src="./images/logo.png" alt="logo" />
         <p>
-          Welcome to M Mart, <br />
+          Welcome to Thapa EcomStore, <br />
           your ultimate destination for
           <br />
           cutting-edge gadgets!
@@ -45,6 +46,5 @@ const footerHTML = `<footer class="section-footer">
     </div>
   </footer>`;
 
-  const footerElem = document.querySelector(".setion-footer");
-  footerElem.insertAdjacentHTML("afterbegin", footerHTML);
-  
+const footerElem = document.querySelector(".section-footer");
+footerElem.insertAdjacentHTML("afterbegin", footerHTML);
